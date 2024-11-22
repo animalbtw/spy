@@ -8,6 +8,9 @@ export default async function Home() {
     const ip = data.get('x-forwarded-for')
     const reqUrl = data.get('request-url')
 
+    console.log(ip)
+    console.log(reqUrl)
+
     return (
       <div className={styles.page}>
         <div className={styles.container}>
