@@ -5,25 +5,31 @@ export default async function Home() {
   const data = await getClientData().then(res => res)
 
   if (data) {
-    const serData = new Array(data)
-    console.log(serData)
+    const ip = data.get('x-forwarded-for')
+    const reqUrl = data.get('request-url')
 
     return (
       <div className={styles.page}>
-        {serData.map((val, index) => {
-          return (
-            <div key={index}>
-              {val} <br />
-            </div>
-          )
-        })}
+        <div className={styles.container}>
+          <div>
+            loading or something is wrong
+          </div>
+          <div className={styles.ip}>
+            {ip}
+          </div>
+          <div>
+            {reqUrl}
+          </div>
+        </div>
       </div>
-    )
+    );
   }
 
   return (
     <div className={styles.page}>
-      loading or smth is wrong
+      <div className={styles.container}>
+        loading or something is wrong
+      </div>
     </div>
-  );
+  )
 }

@@ -6,5 +6,21 @@
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container {
   max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ip {
+  margin-top: 20px;
 }
