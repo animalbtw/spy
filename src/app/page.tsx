@@ -6,13 +6,17 @@ export default async function Home() {
 
   if (data) {
     const serData = new Array(data)
+    console.log(serData)
+
     return (
       <div className={styles.page}>
-        {serData.map((val, index) => (
-          <div key={index}>
-            {val}
-          </div>
-        ))}
+        {serData.map((val, index) => {
+          return (
+            <div key={index}>
+              {val} <br />
+            </div>
+          )
+        })}
       </div>
     )
   }
