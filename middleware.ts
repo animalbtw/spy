@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-function middleware(req: any) {
+export function middleware(req: any) {
     const requestHeaders = new Headers(req.headers)
   
     // Add new request headers

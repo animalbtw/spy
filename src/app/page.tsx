@@ -1,8 +1,7 @@
 import {headers} from "next/headers";
 import styles from "./page.module.css";
-import { NextPage } from 'next';
 
-export default function Home(props: NextPage) {
+export default function Home() {
   headers().then(res => console.log(res))
 
   return (
