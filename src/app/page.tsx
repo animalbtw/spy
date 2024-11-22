@@ -5,11 +5,11 @@ export default async function Home() {
   const data = await getClientData().then(res => res)
 
   if (data) {
-    // const ip = data.get('x-forwarded-for')
-    // const reqUrl = data.get('request-url')
+    const ip = data.get('x-forwarded-for')
+    const reqUrl = data.get('request-url')
 
-    // console.log(ip)
-    // console.log(reqUrl)
+    console.log(ip)
+    console.log(reqUrl)
 
     return (
       <div className={styles.page}>
